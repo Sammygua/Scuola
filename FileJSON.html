@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> FileJSON</title>
+    <script>
+        function invia(){
+            let dati = {
+                nome: document.getElementById('nome').value,
+                cognome: document.getElementById('cognome').value,
+                eta: document.getElementById('eta').value,
+                citta: document.getElementById('citta').value,
+                tele: document.getElementById('tele').value
+            };
+            const MandaJSON = JSON.stringify(dati);
+            localStorage.setItem('FileJSON',FileJSON);
+            document.location.href="TabellaJSON.html";
+        }
+    </script>
+</head>
+<body>
+    <div>Inserisci Nome</div>
+    <input type="text" id="nome" name="nome"><br>
+    <div>Inserisci Cognome</div>
+    <input type="text" id="cognome" name="cognome"><br>
+    <div>Inserisci Eta</div>
+    <input type="number" id="eta" name="eta"><br>
+    <div>Inserisci Citta</div>
+    <input type="text" id="citta" name="citta"><br>
+    <div>Inserisci Telefono</div>
+    <input type="number" id="tele" name="tele"><br>
+    <button input type="button" onclick="invia()"> Invia </button><br>
+</body>
+</html>
