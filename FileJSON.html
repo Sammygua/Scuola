@@ -11,7 +11,7 @@
                 citta: document.getElementById('citta').value,
                 tele: document.getElementById('tele').value
             };
-            const MandaJSON = JSON.stringify(dati);
+            const FileJSON = JSON.stringify(dati);
             localStorage.setItem('FileJSON',FileJSON);
             document.location.href="TabellaJSON.html";
         }
