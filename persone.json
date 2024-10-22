@@ -1,0 +1,50 @@
+[
+    {
+        "nome": "Mario",
+        "cognome": "Rossi",
+        "eta": 30,
+        "indirizzo": "Via Roma 10",
+        "citta": "Milano",
+        "telefono": "0123456789"
+    },
+    {
+        "nome": "Giulia",
+        "cognome": "Bianchi",
+        "eta": 25,
+        "indirizzo": "Corso Italia 20",
+        "citta": "Torino",
+        "telefono": "9876543210"
+    },
+    {
+        "nome": "Luca",
+        "cognome": "Verdi",
+        "eta": 28,
+        "indirizzo": "Piazza Navona 5",
+        "citta": "Roma",
+        "telefono": "5551234567"
+    },
+    {
+        "nome": "Sara",
+        "cognome": "Neri",
+        "eta": 32,
+        "indirizzo": "Viale Milano 15",
+        "citta": "Firenze",
+        "telefono": "3216549870"
+    },
+    {
+        "nome": "Andrea",
+        "cognome": "Gallo",
+        "eta": 27,
+        "indirizzo": "Via Venezia 8",
+        "citta": "Napoli",
+        "telefono": "6543210987"
+    },
+    {
+        "nome": "Martina",
+        "cognome": "Ferri",
+        "eta": 29,
+        "indirizzo": "Via Firenze 3",
+        "citta": "Bologna",
+        "telefono": "7890123456"
+    }
+]

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lettore json persone</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Cognome</th>
+                <th>Età</th>
+                <th>Indirizzo</th>
+                <th>Città</th>
+                <th>Telefono</th>
+            </tr>
+        </thead>
+        <tbody id="corpo">
+
+        </tbody>
+    </table>
+    <script>
+        let tbody=document.getElementById("corpo")
+        let lettore=new XMLHttpRequest()
+        lettore.open("GET","persone.json",true);
+        lettore.onreadystatechange=function(){
+            if(this.readyState == 4 && this.status == 200){
+                let persone=JSON.parse(this.responseText)
+                for(const persona of persone){
+                    let riga=document.createElement("tr")
+                    tbody.appendChild(riga)
+                    let d=document.createElement("td")
+                    riga.appendChild(d)
+                    d.innerText=persona.nome
+                    d=document.createElement("td")
+                    riga.appendChild(d)
+                    d.innerText=persona.cognome
+                    d=document.createElement("td")
+                    riga.appendChild(d)
+                    d.innerText=persona.eta
+                    d=document.createElement("td")
+                    riga.appendChild(d)
+                    d.innerText=persona.indirizzo
+                    d=document.createElement("td")
+                    riga.appendChild(d)
+                    d.innerText=persona.citta
+                    d=document.createElement("td")
+                    riga.appendChild(d).telefono
+                    d.innerText=persona.nome
+                }
+            }
+        }
+        lettore.send;
+    </script>
+</body>
+</html>
