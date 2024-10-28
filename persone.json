@@ -5,7 +5,10 @@
         "eta": 30,
         "indirizzo": "Via Roma 10",
         "citta": "Milano",
-        "telefono": "0123456789"
+        "telefono":[{ "123456789"},
+            {"332987345"},
+            {"331004132"}
+        ]
     },
     {
         "nome": "Giulia",
@@ -13,7 +16,10 @@
         "eta": 25,
         "indirizzo": "Corso Italia 20",
         "citta": "Torino",
-        "telefono": "9876543210"
+        "telefono": [{ "123456789"},
+            {"332987345"},
+            {"331004132"}
+        ]"9876543210"
     },
     {
         "nome": "Luca",
