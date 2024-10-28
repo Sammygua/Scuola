@@ -13,7 +13,7 @@
         "eta": 25,
         "indirizzo": "Corso Italia 22",
         "citta": "Torino",
-        "telefono": ["3388765432"]
+        "telefono": ["FISSO: 3388765432"]
     },
     {
         "nome": "Giovanni",
@@ -21,7 +21,7 @@
         "eta": 45,
         "indirizzo": "Via Garibaldi 15",
         "citta": "Firenze",
-        "telefono": ["3291234567", "0551234567"]
+        "telefono": ["UFFICIO: 3291234567", "MOBILE: 0551234567"]
     },
     {
         "nome": "Sara",
@@ -29,7 +29,7 @@
         "eta": 29,
         "indirizzo": "Piazza Navona 3",
         "citta": "Roma",
-        "telefono": ["3477654321"]
+        "telefono": ["MOBILE: 3477654321"]
     },
     {
         "nome": "Marco",
@@ -37,7 +37,7 @@
         "eta": 38,
         "indirizzo": "Via Milano 50",
         "citta": "Napoli",
-        "telefono": ["3339876543", "0819876543"]
+        "telefono": ["FISSO: 3339876543", "UFFICIO: 0819876543"]
     },
     {
         "nome": "Elena",
@@ -45,6 +45,6 @@
         "eta": 32,
         "indirizzo": "Viale dei Giardini 5",
         "citta": "Bologna",
-        "telefono": ["3201234567"]
+        "telefono": ["MOBILE: 3201234567"]
     }
 ]
