@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lettore json persone</title>
 </head>
 <body>
@@ -18,7 +16,6 @@
             </tr>
         </thead>
         <tbody id="corpo">
-
         </tbody>
     </table>
     <script>
@@ -47,8 +44,8 @@
                     riga.appendChild(d)
                     d.innerText=persona.citta
                     d=document.createElement("td")
-                    riga.appendChild(d).telefono
-                    d.innerText=persona.nome
+                    riga.appendChild(d)
+                    d.innerText=persona.telefono[0]
                 }
             }
         }
