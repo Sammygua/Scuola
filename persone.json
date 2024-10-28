@@ -5,7 +5,7 @@
         "eta": 30,
         "indirizzo": "Via Roma 10",
         "citta": "Milano",
-        "telefono": ["3312345678", "0212345678"]
+        "telefono": ["FISSO: 3312345678", "MOBILE: 0212345678"]
     },
     {
         "nome": "Laura",
