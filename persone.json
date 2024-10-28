@@ -2,49 +2,49 @@
     {
         "nome": "Mario",
         "cognome": "Rossi",
-        "età": 30,
+        "eta": 30,
         "indirizzo": "Via Roma 10",
-        "città": "Milano",
-        "numeri_di_telefono": ["3312345678", "0212345678"]
+        "citta": "Milano",
+        "telefono": ["3312345678", "0212345678"]
     },
     {
         "nome": "Laura",
         "cognome": "Bianchi",
-        "età": 25,
+        "eta": 25,
         "indirizzo": "Corso Italia 22",
-        "città": "Torino",
-        "numeri_di_telefono": ["3388765432"]
+        "citta": "Torino",
+        "telefono": ["3388765432"]
     },
     {
         "nome": "Giovanni",
         "cognome": "Verdi",
-        "età": 45,
+        "eta": 45,
         "indirizzo": "Via Garibaldi 15",
-        "città": "Firenze",
-        "numeri_di_telefono": ["3291234567", "0551234567"]
+        "citta": "Firenze",
+        "telefono": ["3291234567", "0551234567"]
     },
     {
         "nome": "Sara",
         "cognome": "Neri",
-        "età": 29,
+        "eta": 29,
         "indirizzo": "Piazza Navona 3",
-        "città": "Roma",
-        "numeri_di_telefono": ["3477654321"]
+        "citta": "Roma",
+        "telefono": ["3477654321"]
     },
     {
         "nome": "Marco",
         "cognome": "Gallo",
-        "età": 38,
+        "eta": 38,
         "indirizzo": "Via Milano 50",
-        "città": "Napoli",
-        "numeri_di_telefono": ["3339876543", "0819876543"]
+        "citta": "Napoli",
+        "telefono": ["3339876543", "0819876543"]
     },
     {
         "nome": "Elena",
         "cognome": "Fabbri",
-        "età": 32,
+        "eta": 32,
         "indirizzo": "Viale dei Giardini 5",
-        "città": "Bologna",
-        "numeri_di_telefono": ["3201234567"]
+        "citta": "Bologna",
+        "telefono": ["3201234567"]
     }
 ]
