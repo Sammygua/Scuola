@@ -1,1 +1,9 @@
-
+[
+  {
+        "nome": "Mario",
+        "cognome": "Rossi",
+        "eta": 30,
+        "indirizzo": "Via Roma 10",
+        "citta": "Milano",
+  }
+]
