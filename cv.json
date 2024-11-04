@@ -1,6 +1,6 @@
 {
   "curriculum": {
-    "informazioni personali": {
+    "INFORMAZIONI PERSONALI": {
       "nome": "Samuele",
       "cognome": "Guaiana",
       "indirizzo": "Via Alcide de Gasperi 20",
@@ -9,51 +9,42 @@
       "nascita": "06/02/2006",
       "nazionalità": "Italiana"
     },
-    "esperienza_lavorativa": [
+    "ESPERIENZA LAVORATIVA": [
       {
-        "ruolo": "Sviluppatore Software",
-        "azienda": "Tech Solutions Srl",
-        "luogo": "Roma",
-        "data_inizio": "2018-01-01",
-        "data_fine": "2023-10-31",
-        "responsabilità": [
-          "Sviluppo di applicazioni web.",
-          "Collaborazione con il team per la progettazione e implementazione di soluzioni software.",
-          "Gestione della documentazione tecnica."
+        "titolo": "PCTO First Lego League",
+        "azienda": "ITIS Cannizzaro",
+        "luogo": "Rho",
+        "inizio": "8/3/2023",
+        "fine": "20/5/2023",
+        "attività svolte": [
+          "Sviluppo percorso robot.",
+          "Collaborare con il team per la progettazione e costruzione del modellino."
         ]
       },
       {
-        "ruolo": "Stagista Sviluppatore",
-        "azienda": "Innovatech Srl",
-        "luogo": "Roma",
-        "data_inizio": "2017-06-01",
-        "data_fine": "2017-12-31",
-        "responsabilità": [
-          "Supporto nello sviluppo di progetti software.",
-          "Test e debug delle applicazioni.",
-          "Partecipazione a riunioni di progetto."
+        "titolo": "PCTO Phloema",
+        "azienda": "Phloema Srl",
+        "luogo": "Milano",
+        "inizio": "10/6/2024",
+        "fine": "21/6/2024",
+        "attività svolte": [
+          "Stipulazione manuale d'uso dell'applicativo.",
+          "Stipulazione manuale test applicativo per rilevare eventuali errori."
         ]
       }
     ],
-    "istruzione": [
+    "ISTRUZIONE": [
       {
-        "titolo": "Laurea Magistrale in Ingegneria Informatica",
-        "istituzione": "Università degli Studi di Roma",
-        "data_conseguimento": "2017-04-30"
-      },
-      {
-        "titolo": "Diploma di Maturità Scientifica",
-        "istituzione": "Liceo Scientifico Galileo Galilei",
-        "data_conseguimento": "2012-07-15"
+        "titolo": "Diploma Maturità informatica",
+        "istituzione": "ITIS S. Cannizzaro",
+        "data conseguimento": "2/7/2025"
       }
     ],
-    "competenze": [
-      "Linguaggi di programmazione: Java, Python, JavaScript",
-      "Framework: React, Spring",
-      "Database: MySQL, MongoDB",
-      "Strumenti: Git, Docker, JIRA"
+    "COMPETENZE": [
+      "Linguaggi di programmazione: Java, Html",
+      "Database: MySQL"
     ],
-    "lingue": [
+    "LINGUE": [
       {
         "lingua": "Italiano",
         "livello": "Madrelingua"
@@ -61,12 +52,16 @@
       {
         "lingua": "Inglese",
         "livello": "Avanzato"
+      },
+      {
+        "lingua": "Spagnolo",
+        "livello": "Livello Base"
       }
     ],
-    "interessi": [
-      "Tecnologie emergenti",
-      "Programmazione open source",
-      "Ciclismo"
+    "INTERESSI/HOBBY": [
+      "Giocare ai videogiochi",
+      "Giocare a basket",
+      "Ascoltare la musica"
     ]
   }
 }
