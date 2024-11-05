@@ -15,6 +15,7 @@
                 <th align="center">Indirizzo</th>
                 <th align="center">Città</th>
                 <th align="center">Telefono</th>
+                <th align="center">CV</th>
             </tr>
         </thead>
         <tbody id="corpo">
@@ -49,6 +50,7 @@
                     d=document.createElement("td")
                     riga.appendChild(d)
                     d.innerText=persona.telefono.join(", ")
+                    riga.appendChild(d)
                 }
             }
         }
