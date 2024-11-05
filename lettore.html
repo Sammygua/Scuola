@@ -29,7 +29,6 @@
             if(this.readyState == 4 && this.status == 200){
                 let persone=JSON.parse(this.responseText)
                 for(const persona of persone){
-                    console.log("seresse\n",persona)
                     let riga=document.createElement("tr")
                     tbody.appendChild(riga)
                     let d=document.createElement("td")
