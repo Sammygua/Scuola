@@ -3,7 +3,7 @@
     "INFORMAZIONI PERSONALI": {
       "nome": "Mario",
       "cognome": "Rossi",
-      "indirizzo": Via Roma 10",
+      "indirizzo": "Via Roma 10",
       "telefono": "+39 3291881192",
       "email": "guaianasamuele@gmail.com",
       "nascita": "06/02/2006",
@@ -21,17 +21,6 @@
           "Collaborare con il team per la progettazione e costruzione del modellino."
         ]
       },
-      {
-        "titolo": "PCTO Phloema",
-        "azienda": "Phloema Srl",
-        "luogo": "Milano",
-        "inizio": "10/6/2024",
-        "fine": "21/6/2024",
-        "attività svolte": [
-          "Stipulazione manuale d'uso dell'applicativo.",
-          "Stipulazione manuale test applicativo per rilevare eventuali errori."
-        ]
-      }
     ],
     "ISTRUZIONE": [
       {
@@ -52,10 +41,6 @@
       {
         "lingua": "Inglese",
         "livello": "Avanzato"
-      },
-      {
-        "lingua": "Spagnolo",
-        "livello": "Livello Base"
       }
     ]
   }
