@@ -4,18 +4,18 @@
       "nome": "Mario",
       "cognome": "Rossi",
       "indirizzo": "Via Roma 10",
-      "telefono": "+39 3291881192",
-      "email": "guaianasamuele@gmail.com",
-      "nascita": "06/02/2006",
+      "telefono": "+39 3312345678",
+      "email": "mario.rossi@gmail.com",
+      "nascita": "1/4/1994",
       "nazionalità": "Italiana"
     },
     "ESPERIENZA LAVORATIVA": [
       {
-        "titolo": "PCTO First Lego League",
-        "azienda": "ITIS Cannizzaro",
-        "luogo": "Rho",
-        "inizio": "8/3/2023",
-        "fine": "20/5/2023",
+        "titolo": "Pilota Ryanair",
+        "azienda": "Ryanair",
+        "luogo": "Swords, Irlanda",
+        "inizio": "4/5/2001",
+        "fine": "presente",
         "attività svolte": [
           "Sviluppo percorso robot.",
           "Collaborare con il team per la progettazione e costruzione del modellino."
