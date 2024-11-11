@@ -5,9 +5,7 @@
         "eta": 30,
         "indirizzo": "Via Roma 10",
         "citta": "Milano",
-        "telefono": ["FISSO: 3312345678", "MOBILE: 0212345678"],
-        "cv": "aereo.webp"
-        "link": "index.html"
+        "telefono": ["FISSO: 3312345678", "MOBILE: 0212345678"]
     },
     {
         "nome": "Laura",
@@ -15,9 +13,7 @@
         "eta": 25,
         "indirizzo": "Corso Italia 22",
         "citta": "Torino",
-        "telefono": ["FISSO: 3388765432"],
-        "cv": "ballerina.webp"
-        "link": "index.html"
+        "telefono": ["FISSO: 3388765432"]
     },
     {
         "nome": "Giovanni",
@@ -25,9 +21,7 @@
         "eta": 45,
         "indirizzo": "Via Garibaldi 15",
         "citta": "Firenze",
-        "telefono": ["UFFICIO: 3291234567", "MOBILE: 0551234567"],
-        "cv": "taxi.png"
-        "link": "index.html"
+        "telefono": ["UFFICIO: 3291234567", "MOBILE: 0551234567"]
     },
     {
         "nome": "Sara",
@@ -35,9 +29,7 @@
         "eta": 29,
         "indirizzo": "Piazza Navona 3",
         "citta": "Roma",
-        "telefono": ["MOBILE: 3477654321"],
-        "cv": "pasticcera.jpg"
-        "link": "index.html"
+        "telefono": ["MOBILE: 3477654321"]
     },
     {
         "nome": "Marco",
@@ -45,9 +37,7 @@
         "eta": 38,
         "indirizzo": "Via Milano 50",
         "citta": "Napoli",
-        "telefono": ["FISSO: 3339876543", "UFFICIO: 0819876543"],
-        "cv": "scrittore.jpg"
-        "link": "index.html"
+        "telefono": ["FISSO: 3339876543", "UFFICIO: 0819876543"]
     },
     {
         "nome": "Elena",
@@ -55,8 +45,6 @@
         "eta": 32,
         "indirizzo": "Viale dei Giardini 5",
         "citta": "Bologna",
-        "telefono": ["MOBILE: 3201234567"],
-        "cv": "dentista.png"
-        "link": "index.html"
+        "telefono": ["MOBILE: 3201234567"]
     }
 ]
