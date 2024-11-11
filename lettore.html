@@ -50,51 +50,6 @@
                     d=document.createElement("td")
                     riga.appendChild(d)
                     d.innerText=persona.telefono.join(", ")
-                    <style>
-                    .thumbnail {
-                        width: 50px;
-                        height: 50px;
-                        border-radius: 50%;
-                    }
-                    </style>
-                    //d.innerText=persona.cv
-                    // Creazione del link
-                    /*var link = document.createElement('a');
-                    link.href = thumb.link;
-                    link.target = '_blank';  // Link si apre in una nuova finestra/scheda
-                    // Creazione dell'immagine
-                    var img = document.createElement('img');
-                    img.src = persona.cv;  // Percorso dell'immagine
-                    img.width = 150;  // Imposta una dimensione fissa per le thumbnail
-                    img.height = 150;
-    
-                    // Aggiungi l'immagine al link
-                    link.appendChild(img);
-                    
-                    // Aggiungi il link al contenitore
-                    container.appendChild(link);*/
-
-                     // Aggiungiamo la foto come thumbnail
-                    d = document.createElement("td");
-                    riga.appendChild(d);
-                    let img = document.createElement("img");
-                    img.src = persona.cv;  // Percorso dell'immagine (deve essere relativo o assoluto)
-                    img.classList.add("thumbnail");
-                    d.appendChild(img);
-                    
-                    // Aggiungiamo il link al CV
-                    d = document.createElement("td");
-                    riga.appendChild(d);
-                    let cvLink = document.createElement("a");
-                    cvLink.href = persona.link;  // URL del CV
-                    cvLink.target = "_blank";   // Apre il CV in una nuova finestra
-                    cvLink.innerText = "Visualizza CV";
-                    d.appendChild(cvLink);
-
-
-
-                    
-
                 }
             }
         }
