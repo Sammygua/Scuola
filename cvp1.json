@@ -7,41 +7,7 @@
       "telefono": "+39 3312345678",
       "email": "mario.rossi@gmail.com",
       "nascita": "1/4/1994",
-      "nazionalità": "Italiana"
-    },
-    "ESPERIENZA LAVORATIVA": [
-      {
-        "titolo": "Pilota Ryanair",
-        "azienda": "Ryanair",
-        "luogo": "Swords, Irlanda",
-        "inizio": "4/5/2001",
-        "fine": "presente",
-        "attività svolte": [
-          "Sviluppo percorso robot.",
-          "Collaborare con il team per la progettazione e costruzione del modellino."
-        ]
-      },
-    ],
-    "ISTRUZIONE": [
-      {
-        "titolo": "Diploma Maturità informatica",
-        "istituzione": "ITIS S. Cannizzaro",
-        "data conseguimento": "2/7/2025"
-      }
-    ],
-    "COMPETENZE": [
-      "Linguaggi di programmazione: Java, Html",
-      "Database: MySQL"
-    ],
-    "LINGUE": [
-      {
-        "lingua": "Italiano",
-        "livello": "Madrelingua"
-      },
-      {
-        "lingua": "Inglese",
-        "livello": "Avanzato"
-      }
-    ]
+      "nazionalità": "Italiana",
+      "professione": "Pilota di aerei"
   }
 }
