@@ -52,7 +52,29 @@
                     d.innerText=persona.telefono.join(", ")
                     d=document.createElement("td")
                     riga.appendChild(d)
-                    d.innerText=persona.cv
+                    
+                    //d.innerText=persona.cv
+                    // Creazione del link
+                    var link = document.createElement('a');
+                    link.href = thumb.link;
+                    link.target = '_blank';  // Link si apre in una nuova finestra/scheda
+                    // Creazione dell'immagine
+                    var img = document.createElement('img');
+                    img.src = thumb.image;  // Percorso dell'immagine
+                    img.alt = 'Thumbnail';
+                    img.width = 150;  // Imposta una dimensione fissa per le thumbnail
+                    img.height = 150;
+    
+                    // Aggiungi l'immagine al link
+                    link.appendChild(img);
+                    
+                    // Aggiungi il link al contenitore
+                    container.appendChild(link);
+            
+
+
+
+                    
 
                 }
             }
