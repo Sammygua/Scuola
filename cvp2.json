@@ -1,62 +1,13 @@
 {
   "curriculum": {
     "INFORMAZIONI PERSONALI": {
-      "nome": "Samuele",
-      "cognome": "Guaiana",
-      "indirizzo": "Via Alcide de Gasperi 20",
-      "telefono": "+39 3291881192",
-      "email": "guaianasamuele@gmail.com",
-      "nascita": "06/02/2006",
-      "nazionalità": "Italiana"
-    },
-    "ESPERIENZA LAVORATIVA": [
-      {
-        "titolo": "PCTO First Lego League",
-        "azienda": "ITIS Cannizzaro",
-        "luogo": "Rho",
-        "inizio": "8/3/2023",
-        "fine": "20/5/2023",
-        "attività svolte": [
-          "Sviluppo percorso robot.",
-          "Collaborare con il team per la progettazione e costruzione del modellino."
-        ]
-      },
-      {
-        "titolo": "PCTO Phloema",
-        "azienda": "Phloema Srl",
-        "luogo": "Milano",
-        "inizio": "10/6/2024",
-        "fine": "21/6/2024",
-        "attività svolte": [
-          "Stipulazione manuale d'uso dell'applicativo.",
-          "Stipulazione manuale test applicativo per rilevare eventuali errori."
-        ]
-      }
-    ],
-    "ISTRUZIONE": [
-      {
-        "titolo": "Diploma Maturità informatica",
-        "istituzione": "ITIS S. Cannizzaro",
-        "data conseguimento": "2/7/2025"
-      }
-    ],
-    "COMPETENZE": [
-      "Linguaggi di programmazione: Java, Html",
-      "Database: MySQL"
-    ],
-    "LINGUE": [
-      {
-        "lingua": "Italiano",
-        "livello": "Madrelingua"
-      },
-      {
-        "lingua": "Inglese",
-        "livello": "Avanzato"
-      },
-      {
-        "lingua": "Spagnolo",
-        "livello": "Livello Base"
-      }
-    ]
+      "nome": "Mario",
+      "cognome": "Rossi",
+      "indirizzo": "Via Roma 10",
+      "telefono": "+39 3312345678",
+      "email": "mario.rossi@gmail.com",
+      "nascita": "1/4/1994",
+      "nazionalità": "Italiana",
+      "professione": "Pilota di aerei"
   }
 }
