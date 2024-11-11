@@ -7,6 +7,7 @@
         "citta": "Milano",
         "telefono": ["FISSO: 3312345678", "MOBILE: 0212345678"],
         "cv": "aereo.webp"
+        "link": "index.html"
     },
     {
         "nome": "Laura",
@@ -16,6 +17,7 @@
         "citta": "Torino",
         "telefono": ["FISSO: 3388765432"],
         "cv": "ballerina.webp"
+        "link": "index.html"
     },
     {
         "nome": "Giovanni",
@@ -25,6 +27,7 @@
         "citta": "Firenze",
         "telefono": ["UFFICIO: 3291234567", "MOBILE: 0551234567"],
         "cv": "taxi.png"
+        "link": "index.html"
     },
     {
         "nome": "Sara",
@@ -34,6 +37,7 @@
         "citta": "Roma",
         "telefono": ["MOBILE: 3477654321"],
         "cv": "pasticcera.jpg"
+        "link": "index.html"
     },
     {
         "nome": "Marco",
@@ -43,6 +47,7 @@
         "citta": "Napoli",
         "telefono": ["FISSO: 3339876543", "UFFICIO: 0819876543"],
         "cv": "scrittore.jpg"
+        "link": "index.html"
     },
     {
         "nome": "Elena",
@@ -52,5 +57,6 @@
         "citta": "Bologna",
         "telefono": ["MOBILE: 3201234567"],
         "cv": "dentista.png"
+        "link": "index.html"
     }
 ]
