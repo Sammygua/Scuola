@@ -51,6 +51,13 @@
                     d=document.createElement("td")
                     riga.appendChild(d)
                     d.innerText=persona.telefono.join(", ")
+                    let x=document.createElement("td")
+                    riga.appendChild(x)
+                    let h=document.createElement("a")
+                    h.setAttrbute(href,"cv.html?id"+persona.id)
+                    let im=document.createElement("img")
+                    im.src=persone.cv
+                    x.appendChild(im)
                 }
             }
         }
