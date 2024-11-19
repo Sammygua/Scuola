@@ -10,6 +10,7 @@
         "cv":"/img/aereo.webp"
     },
     {
+        "id":"02",
         "nome": "Laura",
         "cognome": "Bianchi",
         "eta": 25,
@@ -19,6 +20,7 @@
         "cv":"/img/ballerina.webp"
     },
     {
+        "id":"03",
         "nome": "Giovanni",
         "cognome": "Verdi",
         "eta": 45,
@@ -28,6 +30,7 @@
         "cv":"/img/dente.png"
     },
     {
+        "id":"04",
         "nome": "Sara",
         "cognome": "Neri",
         "eta": 29,
@@ -37,6 +40,7 @@
         "cv":"/img/pasticcera.jpg"
     },
     {
+        "id":"05",
         "nome": "Marco",
         "cognome": "Gallo",
         "eta": 38,
@@ -46,6 +50,7 @@
         "cv":"/img/taxi.png"
     },
     {
+        "id":"06",
         "nome": "Elena",
         "cognome": "Fabbri",
         "eta": 32,
