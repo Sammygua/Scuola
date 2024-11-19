@@ -1,11 +1,13 @@
 [
     {
+        "id":"01",
         "nome": "Mario",
         "cognome": "Rossi",
         "eta": 30,
         "indirizzo": "Via Roma 10",
         "citta": "Milano",
-        "telefono": ["FISSO: 3312345678", "MOBILE: 0212345678"]
+        "telefono": ["FISSO: 3312345678", "MOBILE: 0212345678"],
+        "cv":"/img/immagine.jpg"
     },
     {
         "nome": "Laura",
