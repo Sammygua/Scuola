@@ -1,12 +1,12 @@
 {
   "curriculum": {
-      "nome": "Mario",
-      "cognome": "Rossi",
-      "indirizzo": "Via Roma 10",
-      "telefono": "+39 3312345678",
-      "email": "mario.rossi@gmail.com",
-      "nascita": "1/4/1994",
+      "nome": "Elena",
+      "cognome": "Fabbri",
+      "indirizzo": "Viale dei Giardini 5",
+      "telefono": "+39 3201234567",
+      "email": "elena.fabbri@gmail.com",
+      "nascita": "23/5/1992",
       "nazionalità": "Italiana",
-      "professione": "Pilota di aerei"
+      "professione": "Scrittrice"
   }
 }
