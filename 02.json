@@ -1,12 +1,12 @@
 {
   "curriculum": {
-      "nome": "Mario",
-      "cognome": "Rossi",
-      "indirizzo": "Via Roma 10",
-      "telefono": "+39 3312345678",
-      "email": "mario.rossi@gmail.com",
-      "nascita": "1/4/1994",
+      "nome": "Laura",
+      "cognome": "Bianchi",
+      "indirizzo": "Corso Italia 22",
+      "telefono": "+39 3388765432",
+      "email": "laura.bianchi@gmail.com",
+      "nascita": "12/9/1999",
       "nazionalità": "Italiana",
-      "professione": "Pilota di aerei"
+      "professione": "Ballerina"
   }
 }
