@@ -1,12 +1,12 @@
 {
   "curriculum": {
-      "nome": "Mario",
-      "cognome": "Rossi",
-      "indirizzo": "Via Roma 10",
-      "telefono": "+39 3312345678",
-      "email": "mario.rossi@gmail.com",
-      "nascita": "1/4/1994",
+      "nome": "Sara",
+      "cognome": "Neri",
+      "indirizzo": "Piazza Navona 3",
+      "telefono": "+39 3477654321",
+      "email": "sara.neri@gmail.com",
+      "nascita": "27/2/1994",
       "nazionalità": "Italiana",
-      "professione": "Pilota di aerei"
+      "professione": "Pasticcera"
   }
 }
