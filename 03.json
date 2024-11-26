@@ -1,12 +1,12 @@
 {
   "curriculum": {
-      "nome": "Mario",
-      "cognome": "Rossi",
-      "indirizzo": "Via Roma 10",
-      "telefono": "+39 3312345678",
-      "email": "mario.rossi@gmail.com",
+      "nome": "Giovanni",
+      "cognome": "Verdi",
+      "indirizzo": "Via Garibaldi 15",
+      "telefono": "+39 3291234567",
+      "email": "giovanni.verdi@gmail.com",
       "nascita": "1/4/1994",
       "nazionalità": "Italiana",
-      "professione": "Pilota di aerei"
+      "professione": "Dentista"
   }
 }
