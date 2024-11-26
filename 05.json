@@ -1,12 +1,12 @@
 {
   "curriculum": {
-      "nome": "Mario",
-      "cognome": "Rossi",
-      "indirizzo": "Via Roma 10",
-      "telefono": "+39 3312345678",
-      "email": "mario.rossi@gmail.com",
-      "nascita": "1/4/1994",
+      "nome": "Marco",
+      "cognome": "Gallo",
+      "indirizzo": "Via Milano 50",
+      "telefono": "+39 3339876543",
+      "email": "marco.gallo@gmail.com",
+      "nascita": "19/7/1986",
       "nazionalità": "Italiana",
-      "professione": "Pilota di aerei"
+      "professione": "Tassista"
   }
 }
