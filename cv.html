@@ -16,32 +16,50 @@
             <td><a id="b"></a></td>
             </tr>
             <tr>
-            <td><a>Eta: </a></td>
+            <td><a>Indirizzo: </a></td>
             <td><a id="c"></a></td>
             </tr>
             <tr>
-            <td><a>Citta: </a></td>
+            <td><a>Telefono: </a></td>
             <td><a id="d"></a></td>
             </tr>
             <tr>
-            <td><a>Telefono: </a></td>
+            <td><a>Email: </a></td>
             <td><a id="e"></a></td>
+            </tr>
+             <tr>
+            <td><a>Data di nascita: </a></td>
+            <td><a id="f"></a></td>
+            </tr>
+             <tr>
+            <td><a>Nazionalità: </a></td>
+            <td><a id="g"></a></td>
+            </tr>
+             <tr>
+            <td><a>Professione: </a></td>
+            <td><a id="h"></a></td>
             </tr>
         </table>
             </div>
         <script>
-            let FileJSON=localStorage.getItem('FileJSON');
-            let dati= JSON.parse(FileJSON);
+            let FileJSON=localStorage.getItem('lettore');
+            let dati= JSON.parse(lettore);
             let div=document.getElementById('a');
             let div1=document.getElementById('b');
             let div2=document.getElementById('c');
             let div3=document.getElementById('d');
             let div4=document.getElementById('e');
+            let div5=document.getElementById('f');
+            let div6=document.getElementById('g');
+            let div7=document.getElementById('h');
             div.innerText+=dati.nome;
             div1.innerText+=dati.cognome;
-            div2.innerText+=dati.eta;
-            div3.innerText+=dati.citta;
-            div4.innerText+=dati.tele;
+            div2.innerText+=dati.ind;
+            div3.innerText+=dati.tele;
+            div4.innerText+=dati.mail;
+            div5.innerText+=dati.data;
+            div6.innerText+=dati.nazio;
+            div7.innerText+=dati.prof;
         </script>
         </center>
     </body>
