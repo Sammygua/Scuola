@@ -1,16 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>Curriculum</title>
-</head>
-<body>
-  <h1>Hello world</h1>
-    <script>
-  let url = location.referrer;
-  alert(url.split("?")[1]);
-  
-</script>
-</body>
+    <head>
+        <title>Curriculum</title>
+    </head>
+    <body>
+        <center>
+            <div style="border: solid; margin-top: 15%; margin-left: 45%; margin-right: 45%;">
+        <table>
+            <tr>
+            <td><a>Nome: </a></td>
+            <td><a id="a"></a></td>
+            </tr> 
+            <tr>
+            <td><a>Cognome: </a></td>
+            <td><a id="b"></a></td>
+            </tr>
+            <tr>
+            <td><a>Eta: </a></td>
+            <td><a id="c"></a></td>
+            </tr>
+            <tr>
+            <td><a>Citta: </a></td>
+            <td><a id="d"></a></td>
+            </tr>
+            <tr>
+            <td><a>Telefono: </a></td>
+            <td><a id="e"></a></td>
+            </tr>
+        </table>
+            </div>
+        <script>
+            let FileJSON=localStorage.getItem('FileJSON');
+            let dati= JSON.parse(FileJSON);
+            let div=document.getElementById('a');
+            let div1=document.getElementById('b');
+            let div2=document.getElementById('c');
+            let div3=document.getElementById('d');
+            let div4=document.getElementById('e');
+            div.innerText+=dati.nome;
+            div1.innerText+=dati.cognome;
+            div2.innerText+=dati.eta;
+            div3.innerText+=dati.citta;
+            div4.innerText+=dati.tele;
+        </script>
+        </center>
+    </body>
 </html>
 
   
