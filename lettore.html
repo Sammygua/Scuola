@@ -12,7 +12,7 @@
                 <th align="center">ID</th>
                 <th align="center">NOME</th>
                 <th align="center">COGNOME</th>
-                <th align="center">ETÀ</th>
+                <th align="center">ETÀ</th>
                 <th align="center">INDIRIZZO</th>
                 <th align="center">CITTÀ</th>
                 <th align="center">TELEFONO</th>
@@ -61,8 +61,17 @@
                     h.setAttribute("href","cv.html?id"+persona.id)
                     let im=document.createElement("img")
                     im.src=persone.cv
-                    x.appendChild(im)
-                    riga.appendChild(h)
+                    h.appendChild(im)
+                    x.appendChild(h)
+                     let portfolioCol = document.createElement("td");
+                        riga.appendChild(portfolioCol);
+                        let portfolioLink = document.createElement("a");
+                        portfolioLink.setAttribute("href", persona.portfolio || "#"); // link XML del portfolio
+                        let portfolioIcon = document.createElement("img");
+                        portfolioIcon.src = "portfolio-icon.png"; // Icona del portfolio (puoi usare una tua immagine)
+                        portfolioIcon.classList.add("portfolio-icon");
+                        portfolioLink.appendChild(portfolioIcon);
+                        portfolioCol.appendChild(portfolioLink);
                 }
             }
         }
