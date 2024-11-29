@@ -69,11 +69,11 @@
                         riga.appendChild(portfolioCol);
                         let portfolioLink = document.createElement("a");
                         portfolioLink.setAttribute("href", persona.portfolio+persona.id); // link XML del portfolio
-                        let portfolioIcon = document.createElement("img");
+                        let icon = document.createElement("img");
                         icon.src = "persone.portfolio"; // Icona del portfolio (puoi usare una tua immagine)
                         icon.style.width = "50px";
                         icon.style.height = "50px";
-                        portfolioIcon.classList.add("portfolio-icon");
+                        icon.classList.add("icon");
                         portfolioLink.appendChild(portfolioIcon);
                         portfolioCol.appendChild(portfolioLink);
                 }
