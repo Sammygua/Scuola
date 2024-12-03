@@ -18,7 +18,7 @@
         "indirizzo": "Corso Italia 22",
         "citta": "Torino",
         "telefono": ["FISSO: 3388765432"],
-        "cv":"/img/ballerina.png",
+        "cv":"ballerina.png",
         "portfolio":"i02.png"
     },
     {
