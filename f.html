@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Curriculum</title>
+    </head>
+    <body>
+        <center>
+            <div style="border: solid; margin-top: 15%; margin-left: 45%; margin-right: 45%;">
+        <table>
+            <tr>
+            <td><a>Nome: </a></td>
+            <td><a id="a"></a></td>
+            </tr> 
+            <tr>
+            <td><a>Cognome: </a></td>
+            <td><a id="b"></a></td>
+            </tr>
+            <tr>
+            <td><a>Indirizzo: </a></td>
+            <td><a id="c"></a></td>
+            </tr>
+            <tr>
+            <td><a>Telefono: </a></td>
+            <td><a id="d"></a></td>
+            </tr>
+            <tr>
+            <td><a>Email: </a></td>
+            <td><a id="e"></a></td>
+            </tr>
+             <tr>
+            <td><a>Data di nascita: </a></td>
+            <td><a id="f"></a></td>
+            </tr>
+             <tr>
+            <td><a>Nazionalità: </a></td>
+            <td><a id="g"></a></td>
+            </tr>
+             <tr>
+            <td><a>Professione: </a></td>
+            <td><a id="h"></a></td>
+            </tr>
+        </table>
+            </div>
+        <script>
+            let FileJSON=localStorage.getItem('01.json');
+            let dati= JSON.parse(01.json);
+            let div=document.getElementById('a');
+            let div1=document.getElementById('b');
+            let div2=document.getElementById('c');
+            let div3=document.getElementById('d');
+            let div4=document.getElementById('e');
+            let div5=document.getElementById('f');
+            let div6=document.getElementById('g');
+            let div7=document.getElementById('h');
+            div.innerText+=dati.nome;
+            div1.innerText+=dati.cognome;
+            div2.innerText+=dati.ind;
+            div3.innerText+=dati.tele;
+            div4.innerText+=dati.mail;
+            div5.innerText+=dati.data;
+            div6.innerText+=dati.nazio;
+            div7.innerText+=dati.prof;
+        </script>
+        </center>
+    </body>
+</html>
+
+  
