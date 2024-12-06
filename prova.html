@@ -1,120 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lettore JSON Persone</title>
+    <title>Curriculum</title>
     <style>
         body {
-            background-image: url('sfondoJSON.webp');
-            background-size: cover;
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
         }
-        .table-container {
-            background-color: white;
-            border: 3px solid black;
-            margin: 10% auto;
-            width: 60%;
+        .container {
+            border: solid 1px black;
+            margin: 15% auto;
+            width: 30%;
             padding: 1rem;
             border-radius: 8px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            background-color: #f9f9f9;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
         }
         table {
             width: 100%;
-            border-collapse: collapse;
         }
-        th, td {
-            padding: 10px;
-            text-align: center;
-            border: 1px solid #ddd;
-        }
-        th {
-            background-color: #007FFF;
-            color: white;
-        }
-        img {
-            width: 50px;
-            height: 50px;
-        }
-        a {
-            text-decoration: none;
-            color: inherit;
+        td {
+            padding: 8px;
         }
     </style>
 </head>
 <body>
-    <div class="table-container">
-        <table>
-            <thead>
+    <center>
+        <div class="container">
+            <table>
                 <tr>
-                    <th scope="col">ID</th>
-                    <th scope="col">Nome</th>
-                    <th scope="col">Cognome</th>
-                    <th scope="col">Età</th>
-                    <th scope="col">Indirizzo</th>
-                    <th scope="col">Città</th>
-                    <th scope="col">Telefono</th>
-                    <th scope="col">CV</th>
-                    <th scope="col">Portfolio</th>
+                    <td><strong>Nome:</strong></td>
+                    <td><span id="a"></span></td>
                 </tr>
-            </thead>
-            <tbody id="corpo">
-                <!-- Popolato dinamicamente -->
-            </tbody>
-        </table>
-    </div>
+                <tr>
+                    <td><strong>Cognome:</strong></td>
+                    <td><span id="b"></span></td>
+                </tr>
+                <tr>
+                    <td><strong>Indirizzo:</strong></td>
+                    <td><span id="c"></span></td>
+                </tr>
+                <tr>
+                    <td><strong>Telefono:</strong></td>
+                    <td><span id="d"></span></td>
+                </tr>
+                <tr>
+                    <td><strong>Email:</strong></td>
+                    <td><span id="e"></span></td>
+                </tr>
+                <tr>
+                    <td><strong>Data di nascita:</strong></td>
+                    <td><span id="f"></span></td>
+                </tr>
+                <tr>
+                    <td><strong>Nazionalità:</strong></td>
+                    <td><span id="g"></span></td>
+                </tr>
+                <tr>
+                    <td><strong>Professione:</strong></td>
+                    <td><span id="h"></span></td>
+                </tr>
+            </table>
+        </div>
 
-    <script>
-        const tbody = document.getElementById("corpo");
+        <script>
+            // Funzione per ottenere i parametri dall'URL
+            const getURLParam = (param) => {
+                const params = new URLSearchParams(window.location.search);
+                return params.get(param);
+            };
 
-        // Funzione per ottenere i dati da un file JSON
-        const fetchData = async () => {
-            try {
-                const response = await fetch("persone.json");
-                if (!response.ok) throw new Error("Errore nel caricamento del file JSON");
-                
-                const persone = await response.json();
-                popolamentoTabella(persone);
-            } catch (error) {
-                console.error("Errore:", error);
-                tbody.innerHTML = `<tr><td colspan="8">Errore nel caricamento dei dati</td></tr>`;
-            }
-        };
+            // Funzione per caricare un file JSON
+            const loadJSON = async (filePath) => {
+                try {
+                    const response = await fetch(filePath);
+                    if (!response.ok) throw new Error(`Errore nel caricamento del file: ${filePath}`);
+                    return await response.json();
+                } catch (error) {
+                    console.error(error);
+                    return null;
+                }
+            };
 
-        // Funzione per creare la tabella
-        const popolamentoTabella = (persone) => {
-            for (const persona of persone) {
-                const riga = document.createElement("tr");
+            // Funzione per aggiornare la tabella con i dati
+            const updateTable = (dati) => {
+                if (!dati) {
+                    console.error("Nessun dato disponibile per aggiornare la tabella.");
+                    return;
+                }
+                document.getElementById('a').innerText = dati.nome || "N/A";
+                document.getElementById('b').innerText = dati.cognome || "N/A";
+                document.getElementById('c').innerText = dati.ind || "N/A";
+                document.getElementById('d').innerText = dati.tele || "N/A";
+                document.getElementById('e').innerText = dati.mail || "N/A";
+                document.getElementById('f').innerText = dati.data || "N/A";
+                document.getElementById('g').innerText = dati.nazio || "N/A";
+                document.getElementById('h').innerText = dati.prof || "N/A";
+            };
 
-                // Popola i dati
-                riga.innerHTML = `
-                    <td>${persona.id}</td>
-                    <td>${persona.nome}</td>
-                    <td>${persona.cognome}</td>
-                    <td>${persona.eta}</td>
-                    <td>${persona.indirizzo}</td>
-                    <td>${persona.citta}</td>
-                    <td>${persona.telefono.join(", ")}</td>
-                    <td>
-                        <a href="provacv.html?id=${persona.id}">
-                            <img src="${persona.cv}" alt="CV di ${persona.nome}">
-                        </a>
-                    </td>
-                    <td>
-                        <a href="provacv.html?id=${persona.id}">
-                            <img src="${persona.portfolio}" alt="Portfolio di ${persona.nome}">
-                        </a>
-                    </td>
-                `;
+            // Inizializzazione
+            const init = async () => {
+                const id = getURLParam("id"); // Ottieni il parametro ID dall'URL
+                if (!id) {
+                    console.error("ID non specificato nell'URL.");
+                    return;
+                }
 
-                tbody.appendChild(riga);
-            }
-        };
+                const fileMap = {
+                    1: "01.json",
+                    2: "02.json",
+                    3: "03.json",
+                    4: "04.json",
+                    5: "05.json",
+                    6: "06.json"
+                };
 
-        // Avvia il caricamento
-        fetchData();
-    </script>
+                const filePath = fileMap[id];
+                if (!filePath) {
+                    console.error(`Nessun file JSON associato all'ID: ${id}`);
+                    return;
+                }
+
+                console.log(`Caricamento file: ${filePath}`);
+                const dati = await loadJSON(filePath);
+                updateTable(dati);
+            };
+
+            init();
+        </script>
+    </center>
 </body>
 </html>
