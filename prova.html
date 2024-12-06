@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lettore JSON Persone</title>
+    <style>
+        body {
+            background-image: url('sfondoJSON.webp');
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .table-container {
+            background-color: white;
+            border: 3px solid black;
+            margin: 10% auto;
+            width: 60%;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #007FFF;
+            color: white;
+        }
+        img {
+            width: 50px;
+            height: 50px;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+    </style>
+</head>
+<body>
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Cognome</th>
+                    <th scope="col">Età</th>
+                    <th scope="col">Indirizzo</th>
+                    <th scope="col">Città</th>
+                    <th scope="col">Telefono</th>
+                    <th scope="col">CV</th>
+                </tr>
+            </thead>
+            <tbody id="corpo">
+                <!-- Popolato dinamicamente -->
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        const tbody = document.getElementById("corpo");
+
+        // Funzione per ottenere i dati da un file JSON
+        const fetchData = async () => {
+            try {
+                const response = await fetch("persone.json");
+                if (!response.ok) throw new Error("Errore nel caricamento del file JSON");
+                
+                const persone = await response.json();
+                popolamentoTabella(persone);
+            } catch (error) {
+                console.error("Errore:", error);
+                tbody.innerHTML = `<tr><td colspan="8">Errore nel caricamento dei dati</td></tr>`;
+            }
+        };
+
+        // Funzione per creare la tabella
+        const popolamentoTabella = (persone) => {
+            for (const persona of persone) {
+                const riga = document.createElement("tr");
+
+                // Popola i dati
+                riga.innerHTML = `
+                    <td>${persona.id}</td>
+                    <td>${persona.nome}</td>
+                    <td>${persona.cognome}</td>
+                    <td>${persona.eta}</td>
+                    <td>${persona.indirizzo}</td>
+                    <td>${persona.citta}</td>
+                    <td>${persona.telefono.join(", ")}</td>
+                    <td>
+                        <a href="cv.html?id=${persona.id}">
+                            <img src="${persona.cv}" alt="CV di ${persona.nome}">
+                        </a>
+                    </td>
+                `;
+
+                tbody.appendChild(riga);
+            }
+        };
+
+        // Avvia il caricamento
+        fetchData();
+    </script>
+</body>
+</html>
