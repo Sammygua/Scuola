@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Curriculum</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            border: solid 1px black;
+            margin: 15% auto;
+            width: 30%;
+            padding: 1rem;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        table {
+            width: 100%;
+        }
+        td {
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <div class="container">
+            <table>
+                <tr>
+                    <td><strong>Nome:</strong></td>
+                    <td><span id="a"></span></td>
+                </tr>
+                <tr>
+                    <td><strong>Cognome:</strong></td>
+                    <td><span id="b"></span></td>
+                </tr>
+                <tr>
+                    <td><strong>Indirizzo:</strong></td>
+                    <td><span id="c"></span></td>
+                </tr>
+                <tr>
+                    <td><strong>Telefono:</strong></td>
+                    <td><span id="d"></span></td>
+                </tr>
+                <tr>
+                    <td><strong>Email:</strong></td>
+                    <td><span id="e"></span></td>
+                </tr>
+                <tr>
+                    <td><strong>Data di nascita:</strong></td>
+                    <td><span id="f"></span></td>
+                </tr>
+                <tr>
+                    <td><strong>Nazionalità:</strong></td>
+                    <td><span id="g"></span></td>
+                </tr>
+                <tr>
+                    <td><strong>Professione:</strong></td>
+                    <td><span id="h"></span></td>
+                </tr>
+            </table>
+        </div>
+
+        <script>
+            // Funzione per caricare un file JSON
+            const loadJSON = async (filePath) => {
+                try {
+                    const response = await fetch(filePath);
+                    if (!response.ok) {
+                        throw new Error(`Errore nel caricamento del file: ${filePath}`);
+                    }
+                    return await response.json();
+                } catch (error) {
+                    console.error(error);
+                    return null;
+                }
+            };
+
+            // Funzione per aggiornare la tabella
+            const updateTable = (dati) => {
+                if (!dati) {
+                    console.error("Nessun dato disponibile per aggiornare la tabella.");
+                    return;
+                }
+                document.getElementById('a').innerText = dati.nome || "N/A";
+                document.getElementById('b').innerText = dati.cognome || "N/A";
+                document.getElementById('c').innerText = dati.ind || "N/A";
+                document.getElementById('d').innerText = dati.tele || "N/A";
+                document.getElementById('e').innerText = dati.mail || "N/A";
+                document.getElementById('f').innerText = dati.data || "N/A";
+                document.getElementById('g').innerText = dati.nazio || "N/A";
+                document.getElementById('h').innerText = dati.prof || "N/A";
+            };
+
+            // Carica i file JSON in sequenza o scegli un file specifico
+            const init = async () => {
+                const filePaths = ["01.json", "02.json", "03.json"]; // Elenco dei file JSON
+                for (const filePath of filePaths) {
+                    console.log(`Caricamento file: ${filePath}`);
+                    const dati = await loadJSON(filePath);
+                    if (dati) {
+                        updateTable(dati); // Aggiorna la tabella con i dati del file JSON
+                        break; // Rimuovi questo `break` se vuoi caricare i dati da tutti i file in sequenza
+                    }
+                }
+            };
+
+            init();
+        </script>
+    </center>
+</body>
+</html>
