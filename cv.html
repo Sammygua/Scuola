@@ -1,68 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Curriculum</title>
-    </head>
-    <body>
-        <center>
-            <div style="border: solid; margin-top: 15%; margin-left: 45%; margin-right: 45%;">
-        <table>
-            <tr>
-            <td><a>Nome: </a></td>
-            <td><a id="a"></a></td>
-            </tr> 
-            <tr>
-            <td><a>Cognome: </a></td>
-            <td><a id="b"></a></td>
-            </tr>
-            <tr>
-            <td><a>Indirizzo: </a></td>
-            <td><a id="c"></a></td>
-            </tr>
-            <tr>
-            <td><a>Telefono: </a></td>
-            <td><a id="d"></a></td>
-            </tr>
-            <tr>
-            <td><a>Email: </a></td>
-            <td><a id="e"></a></td>
-            </tr>
-             <tr>
-            <td><a>Data di nascita: </a></td>
-            <td><a id="f"></a></td>
-            </tr>
-             <tr>
-            <td><a>Nazionalità: </a></td>
-            <td><a id="g"></a></td>
-            </tr>
-             <tr>
-            <td><a>Professione: </a></td>
-            <td><a id="h"></a></td>
-            </tr>
-        </table>
-            </div>
+<head>
+    <title>Curriculum</title>
+</head>
+<body>
+    <center>
+        <div style="border: solid; margin-top: 15%; margin-left: 45%; margin-right: 45%;">
+            <table>
+                <tr>
+                    <td><a>Nome: </a></td>
+                    <td><a id="a"></a></td>
+                </tr> 
+                <tr>
+                    <td><a>Cognome: </a></td>
+                    <td><a id="b"></a></td>
+                </tr>
+                <tr>
+                    <td><a>Indirizzo: </a></td>
+                    <td><a id="c"></a></td>
+                </tr>
+                <tr>
+                    <td><a>Telefono: </a></td>
+                    <td><a id="d"></a></td>
+                </tr>
+                <tr>
+                    <td><a>Email: </a></td>
+                    <td><a id="e"></a></td>
+                </tr>
+                <tr>
+                    <td><a>Data di nascita: </a></td>
+                    <td><a id="f"></a></td>
+                </tr>
+                <tr>
+                    <td><a>Nazionalità: </a></td>
+                    <td><a id="g"></a></td>
+                </tr>
+                <tr>
+                    <td><a>Professione: </a></td>
+                    <td><a id="h"></a></td>
+                </tr>
+            </table>
+        </div>
         <script>
-            let FileJSON=localStorage.getItem('01.json');
-            let dati= JSON.parse(01.json);
-            let div=document.getElementById('a');
-            let div1=document.getElementById('b');
-            let div2=document.getElementById('c');
-            let div3=document.getElementById('d');
-            let div4=document.getElementById('e');
-            let div5=document.getElementById('f');
-            let div6=document.getElementById('g');
-            let div7=document.getElementById('h');
-            div.innerText+=dati.nome;
-            div1.innerText+=dati.cognome;
-            div2.innerText+=dati.ind;
-            div3.innerText+=dati.tele;
-            div4.innerText+=dati.mail;
-            div5.innerText+=dati.data;
-            div6.innerText+=dati.nazio;
-            div7.innerText+=dati.prof;
+            // Ottieni l'ID dalla query string
+            const urlParams = new URLSearchParams(window.location.search);
+            const idPersona = urlParams.get('id'); // Ottieni il valore di 'id'
+
+            // Funzione per ottenere i dati da un file JSON
+            const fetchData = async () => {
+                try {
+                    const response = await fetch("persone.json");
+                    if (!response.ok) throw new Error("Errore nel caricamento del file JSON");
+                    
+                    const persone = await response.json();
+                    const persona = persone.find(p => p.id == idPersona); // Trova la persona con l'ID specificato
+                    
+                    if (persona) {
+                        // Popola la pagina con i dati della persona
+                        document.getElementById('a').innerText = persona.nome;
+                        document.getElementById('b').innerText = persona.cognome;
+                        document.getElementById('c').innerText = persona.indirizzo;
+                        document.getElementById('d').innerText = persona.telefono.join(", ");
+                        document.getElementById('e').innerText = persona.mail;
+                        document.getElementById('f').innerText = persona.data;
+                        document.getElementById('g').innerText = persona.nazio;
+                        document.getElementById('h').innerText = persona.professione;
+                    } else {
+                        alert("Persona non trovata");
+                    }
+                } catch (error) {
+                    console.error("Errore:", error);
+                }
+            };
+
+            // Avvia il caricamento dei dati
+            fetchData();
         </script>
-        </center>
-    </body>
+    </center>
+</body>
 </html>
 
-  
