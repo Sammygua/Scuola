@@ -57,55 +57,58 @@
         </table>
     </div>
 
-    <script>
-        const tbody = document.getElementById("corpo");
+   <script>
+    const tbody = document.getElementById("corpo");
 
-        // Funzione per ottenere i dati da un file JSON
-        const fetchData = async () => {
-            try {
-                const response = await fetch("persone.json");
-                if (!response.ok) throw new Error("Errore nel caricamento del file JSON");
-                
-                const persone = await response.json();
-                popolamentoTabella(persone);
-            } catch (error) {
-                console.error("Errore:", error);
-                tbody.innerHTML = `<tr><td colspan="8">Errore nel caricamento dei dati</td></tr>`;
-            }
-        };
+    // Funzione per ottenere i dati da un file JSON
+    const fetchData = async () => {
+        try {
+            const response = await fetch("persone.json");
+            if (!response.ok) throw new Error("Errore nel caricamento del file JSON");
+            
+            const persone = await response.json();
+            popolamentoTabella(persone);
+        } catch (error) {
+            console.error("Errore:", error);
+            tbody.innerHTML = `<tr><td colspan="9">Errore nel caricamento dei dati</td></tr>`;
+        }
+    };
 
-        // Funzione per creare la tabella
-        const popolamentoTabella = (persone) => {
-            for (const persona of persone) {
-                const riga = document.createElement("tr");
+    // Funzione per creare la tabella
+    const popolamentoTabella = (persone) => {
+        for (const persona of persone) {
+            const riga = document.createElement("tr");
 
-                // Popola i dati
-                riga.innerHTML = `
-                    <td>${persona.id}</td>
-                    <td>${persona.nome}</td>
-                    <td>${persona.cognome}</td>
-                    <td>${persona.eta}</td>
-                    <td>${persona.indirizzo}</td>
-                    <td>${persona.citta}</td>
-                    <td>${persona.telefono.join(", ")}</td>
-                    <td>
-                        <a href="provacv.html?id=${persona.id}">
-                            <img src="${persona.cv}" alt="CV di ${persona.nome}">
-                        </a>
-                    </td>
-                     <td>
-                        <a href="p01.xml?id=${persona.id}">
-                            <img src="${persona.portfolio}" alt="Portfolio di ${persona.nome}">
-                        </a>
-                    </td>
-                `;
+            // Genera il nome del file XML in base all'ID della persona
+            const fileXML = `portfolio${persona.id}.xml`;
 
-                tbody.appendChild(riga);
-            }
-        };
+            // Popola i dati
+            riga.innerHTML = `
+                <td>${persona.id}</td>
+                <td>${persona.nome}</td>
+                <td>${persona.cognome}</td>
+                <td>${persona.eta}</td>
+                <td>${persona.indirizzo}</td>
+                <td>${persona.citta}</td>
+                <td>${persona.telefono.join(", ")}</td>
+                <td>
+                    <a href="provacv.html?id=${persona.id}">
+                        <img src="${persona.cv}" alt="CV di ${persona.nome}">
+                    </a>
+                </td>
+                <td>
+                    <a href="${fileXML}">
+                        <img src="${persona.portfolio}" alt="Portfolio di ${persona.nome}">
+                    </a>
+                </td>
+            `;
 
-        // Avvia il caricamento
-        fetchData();
-    </script>
+            tbody.appendChild(riga);
+        }
+    };
+
+    // Avvia il caricamento
+    fetchData();
+</script>
 </body>
 </html>
