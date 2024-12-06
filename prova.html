@@ -57,6 +57,7 @@
                     <th scope="col">Città</th>
                     <th scope="col">Telefono</th>
                     <th scope="col">CV</th>
+                    <th scope="col">Portfolio</th>
                 </tr>
             </thead>
             <tbody id="corpo">
@@ -97,8 +98,13 @@
                     <td>${persona.citta}</td>
                     <td>${persona.telefono.join(", ")}</td>
                     <td>
-                        <a href="cv.html?id=${persona.id}">
+                        <a href="provacv.html?id=${persona.id}">
                             <img src="${persona.cv}" alt="CV di ${persona.nome}">
+                        </a>
+                    </td>
+                     <td>
+                        <a href="p01.xml?id=${persona.id}">
+                            <img src="${persona.portfolio}" alt="Portfolio di ${persona.nome}">
                         </a>
                     </td>
                 `;
