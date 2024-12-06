@@ -51,21 +51,14 @@
                     <th scope="col">Portfolio</th>
                 </tr>
             </thead>
-            <tbody id="corpo">
-                <!-- Popolato dinamicamente -->
-            </tbody>
         </table>
     </div>
 
     <script>
         const tbody = document.getElementById("corpo");
-
-        // Funzione per ottenere i dati da un file JSON
         const fetchData = async () => {
             try {
                 const response = await fetch("persone.json");
-                if (!response.ok) throw new Error("Errore nel caricamento del file JSON");
-                
                 const persone = await response.json();
                 popolamentoTabella(persone);
             } catch (error) {
@@ -73,13 +66,9 @@
                 tbody.innerHTML = `<tr><td colspan="8">Errore nel caricamento dei dati</td></tr>`;
             }
         };
-
-        // Funzione per creare la tabella
-        const popolamentoTabella = (persone) => {
+        const tabella = (persone) => {
             for (const persona of persone) {
                 const riga = document.createElement("tr");
-
-                // Popola i dati
                 riga.innerHTML = `
                     <td>${persona.id}</td>
                     <td>${persona.nome}</td>
@@ -103,8 +92,6 @@
                 tbody.appendChild(riga);
             }
         };
-
-        // Avvia il caricamento
         fetchData();
     </script>
 </body>
