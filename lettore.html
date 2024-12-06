@@ -51,14 +51,16 @@
                     <th scope="col">Portfolio</th>
                 </tr>
             </thead>
+            <tbody id="corpo">
+            </tbody>
         </table>
     </div>
-
     <script>
         const tbody = document.getElementById("corpo");
         const fetchData = async () => {
             try {
                 const response = await fetch("persone.json");
+                if (!response.ok) throw new Error("Errore nel caricamento del file JSON");
                 const persone = await response.json();
                 popolamentoTabella(persone);
             } catch (error) {
