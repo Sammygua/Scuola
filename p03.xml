@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lavori>
+    <Link>
+        <Title>Google</Title>
+        <URL>https://www.google.com</URL>
+        <Description>Motore di ricerca più popolare.</Description>
+    </Link>
+    <Link>
+        <Title>Wikipedia</Title>
+        <URL>https://www.wikipedia.org</URL>
+        <Description>Enciclopedia libera online.</Description>
+    </Link>
+    <Link>
+        <Title>OpenAI</Title>
+        <URL>https://www.openai.com</URL>
+        <Description>Sviluppatore di intelligenza artificiale avanzata.</Description>
+    </Link>
+    <Link>
+        <Title>GitHub</Title>
+        <URL>https://www.github.com</URL>
+        <Description>Piattaforma per il controllo di versione e la collaborazione sul codice.</Description>
+    </Link>
+</lavori>
