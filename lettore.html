@@ -62,7 +62,7 @@
                 const response = await fetch("persone.json");
                 if (!response.ok) throw new Error("Errore nel caricamento del file JSON");
                 const persone = await response.json();
-                popolamentoTabella(persone);
+                tabella(persone);
             } catch (error) {
                 console.error("Errore:", error);
                 tbody.innerHTML = `<tr><td colspan="8">Errore nel caricamento dei dati</td></tr>`;
