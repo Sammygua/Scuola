@@ -1,15 +1,16 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<lavori>
-    <Link>
-        <Title>Google</Title>
-        <URL>https://www.google.com</URL>
-    </Link>
-    <Link>
-        <Title>Wikipedia</Title>
-        <URL>https://www.wikipedia.org</URL>
-    </Link>>
-    <Link>
-        <Title>GitHub</Title>
-        <URL>https://www.github.com</URL>
-    </Link>
-</lavori>
+<html>
+<body>
+    <div>
+        <title>Google</title>
+        <link>https://www.google.com</link>
+    </div>
+    <div>
+        <title>Wikipedia</title>
+        <link>https://www.wikipedia.org</link>
+    </div>>
+    <div>
+        <title>GitHub</title>
+        <link>https://www.github.com</link>
+    </div>
+</body>
+</html>
