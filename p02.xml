@@ -1,15 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<lavori>
-    <Link>
-        <Title>Bidoo</Title>
-        <URL>https://www.google.com</URL>
-    </Link>
-    <Link>
-        <Title>Wikipedia</Title>
-        <URL>https://www.wikipedia.org</URL>
-    </Link>
-    <Link>
-        <Title>GitHub</Title>
-        <URL>https://www.github.com</URL>
-    </Link>
-</lavori>
+<html>
+<body>
+    <div>
+        <title>Esercizio 1</title>
+        <link>https://sammygua.github.io/Scuola/FileJSON.html</link>
+    </div>
+    <div>
+        <title>Esercizio 2</title>
+        <link>https://sammygua.github.io/Scuola/lettore.html</link>
+    </div>>
+</body>
+</html>
