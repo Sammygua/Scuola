@@ -1,16 +1,12 @@
 <html>
 <body>
     <div>
-        <title>Google</title>
-        <link>https://www.google.com</link>
+        <title>Esercizio 1</title>
+        <link>https://sammygua.github.io/Scuola/FileJSON.html</link>
     </div>
     <div>
-        <title>Wikipedia</title>
-        <link>https://www.wikipedia.org</link>
+        <title>Esercizio 2</title>
+        <link>https://sammygua.github.io/Scuola/lettore.html</link>
     </div>>
-    <div>
-        <title>GitHub</title>
-        <link>https://www.github.com</link>
-    </div>
 </body>
 </html>
