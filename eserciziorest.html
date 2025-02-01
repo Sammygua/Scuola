@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Esercizio REST</title>
+</head>
+<body>
+    <h1>Elenco dei Post</h1>
+    <ul id="post-list"></ul>
+
+    <script>
+        // URL dell'API REST del sito WordPress
+        const apiUrl = 'https://guaianasamuele.wordpress.com/wp-json/wp/v2/posts';
+
+        // Funzione per recuperare i post
+        async function fetchPosts() {
+            try {
+                const response = await fetch(apiUrl);
+                const posts = await response.json();
+                const postList = document.getElementById('post-list');
+
+                // Itera sui post e crea un elemento <li> per ciascuno
+                posts.forEach(post => {
+                    const listItem = document.createElement('li');
+                    listItem.innerHTML = `<a href="${post.link}" target="_blank">${post.title.rendered}</a>`;
+                    postList.appendChild(listItem);
+                });
+            } catch (error) {
+                console.error('Errore nel recupero dei post:', error);
+            }
+        }
+
+        // Chiama la funzione per recuperare i post al caricamento della pagina
+        fetchPosts();
+    </script>
+</body>
+</html>
