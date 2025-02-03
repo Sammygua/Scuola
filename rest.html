@@ -2,35 +2,50 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <title>Esercizio REST</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elenco dei Post</title>
 </head>
 <body>
     <h1>Elenco dei Post</h1>
     <ul id="post-list"></ul>
+    <p id="error-message" style="color: red;"></p>
 
     <script>
-        // URL dell'API REST del sito WordPress
-        const apiUrl = 'https://guaianasamuele.wordpress.com/wp-json/wp/v2/posts';
+        // URL dell'API REST di un sito WordPress funzionante
+        const apiUrl = 'https://www.repubblica.it/wp-json/wp/v2/posts';
 
-        // Funzione per recuperare i post
         async function fetchPosts() {
             try {
                 const response = await fetch(apiUrl);
-                const posts = await response.json();
-                const postList = document.getElementById('post-list');
+                
+                if (!response.ok) {
+                    throw new Error(`Errore HTTP: ${response.status}`);
+                }
 
-                // Itera sui post e crea un elemento <li> per ciascuno
-                posts.forEach(post => {
-                    const listItem = document.createElement('li');
-                    listItem.innerHTML = `<a href="sammygua.github.io/Scuola/lettore.html" target="_blank">Anagrafica 4.0</a>`;
-                    postList.appendChild(listItem);
-                });
+                const posts = await response.json();
+
+                if (posts.length === 0) {
+                    document.getElementById('error-message').innerText = "Nessun post disponibile.";
+                    return;
+                }
+
+                displayPosts(posts);
             } catch (error) {
                 console.error('Errore nel recupero dei post:', error);
+                document.getElementById('error-message').innerText = "Impossibile caricare i post.";
             }
         }
 
-        // Chiama la funzione per recuperare i post al caricamento della pagina
+        function displayPosts(posts) {
+            const postList = document.getElementById('post-list');
+            postList.innerHTML = "";
+            posts.forEach(post => {
+                const listItem = document.createElement('li');
+                listItem.innerHTML = `<a href="${post.link}" target="_blank">${post.title.rendered}</a>`;
+                postList.appendChild(listItem);
+            });
+        }
+
         fetchPosts();
     </script>
 </body>
