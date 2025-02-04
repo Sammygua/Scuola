@@ -3,49 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mappa con Posizione</title>
+    <title>Mappa con Posizione Utente</title>
+
+    <!-- Foglio di stile di Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    
     <style>
-        #map {
-            height: 400px;
-            width: 100%;
-        }
+        body { font-family: Arial, sans-serif; text-align: center; }
+        #map { height: 500px; width: 80%; margin: 20px auto; border-radius: 10px; }
+        #coordinates { font-size: 18px; margin-top: 10px; font-weight: bold; }
     </style>
 </head>
 <body>
-    <h1>La tua posizione sulla mappa</h1>
+    <h2>La tua posizione sulla mappa</h2>
+    <p>Se richiesto, consenti l'accesso alla posizione.</p>
+    
+    <div id="coordinates">Caricamento coordinate...</div>  <!-- Dove mostreremo le coordinate -->
     <div id="map"></div>
 
+    <!-- Libreria Leaflet -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
     <script>
-        function initMap() {
-            if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(function(position) {
-                    const userLocation = {
-                        lat: position.coords.latitude,
-                        lng: position.coords.longitude
-                    };
+        document.addEventListener("DOMContentLoaded", function () {
+            if ("geolocation" in navigator) {
+                navigator.geolocation.getCurrentPosition(
+                    function (position) {
+                        const lat = position.coords.latitude;
+                        const lon = position.coords.longitude;
 
-                    // Inizializza la mappa
-                    const map = new google.maps.Map(document.getElementById('map'), {
-                        center: userLocation,
-                        zoom: 15
-                    });
+                        // Mostra le coordinate sulla pagina
+                        document.getElementById("coordinates").textContent = `Latitudine: ${lat}, Longitudine: ${lon}`;
 
-                    // Aggiungi un marker per la posizione dell'utente
-                    new google.maps.Marker({
-                        position: userLocation,
-                        map: map,
-                        title: 'Sei qui!'
-                    });
-                }, function(error) {
-                    alert('Errore nel ottenere la posizione: ' + error.message);
-                });
+                        // Stampa le coordinate nella console del browser
+                        console.log("Latitudine:", lat, "Longitudine:", lon);
+
+                        // Inizializza la mappa centrata sulla posizione dell'utente
+                        const map = L.map('map').setView([lat, lon], 13);
+
+                        // Aggiunge il layer di OpenStreetMap
+                        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                            attribution: '&copy; OpenStreetMap contributors'
+                        }).addTo(map);
+
+                        // Aggiunge un marker alla posizione dell'utente
+                        L.marker([lat, lon]).addTo(map)
+                            .bindPopup(`<b>Sei qui!</b><br>Lat: ${lat}<br>Lon: ${lon}`)
+                            .openPopup();
+                    },
+                    function (error) {
+                        document.getElementById("coordinates").textContent = "Errore: " + error.message;
+                    }
+                );
             } else {
-                alert('Geolocalizzazione non supportata dal tuo browser.');
+                document.getElementById("coordinates").textContent = "Il tuo browser non supporta la geolocalizzazione.";
             }
-        }
-    </script>
-    <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+        });
     </script>
 </body>
 </html>
