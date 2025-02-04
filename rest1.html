@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Elenco Articoli</title>
+</head>
+<body>
+    <h1>Articoli Recenti</h1>
+    <ul id="articoli-lista"></ul>
+
+    <script>
+        // URL dell'endpoint REST API di WordPress
+        const apiUrl = 'https://esempio.com/wp-json/wp/v2/posts';
+
+        // Funzione per recuperare gli articoli
+        async function fetchArticoli() {
+            try {
+                const response = await fetch(apiUrl);
+                if (!response.ok) {
+                    throw new Error(`Errore HTTP! Status: ${response.status}`);
+                }
+                const articoli = await response.json();
+                mostraArticoli(articoli);
+            } catch (errore) {
+                console.error('Si è verificato un errore:', errore);
+            }
+        }
+
+        // Funzione per visualizzare gli articoli nella pagina
+        function mostraArticoli(articoli) {
+            const lista = document.getElementById('articoli-lista');
+            articoli.forEach(articolo => {
+                const listItem = document.createElement('li');
+                const link = document.createElement('a');
+                link.href = articolo.link;
+                link.textContent = articolo.title.rendered;
+                listItem.appendChild(link);
+                lista.appendChild(listItem);
+            });
+        }
+
+        // Chiamata alla funzione per recuperare e mostrare gli articoli
+        fetchArticoli();
+    </script>
+</body>
+</html>
