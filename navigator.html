@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mappa con posizione utente</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        #map { height: 500px; width: 100%; }
+    </style>
+</head>
+<body>
+    <h2>La tua posizione sulla mappa</h2>
+    <div id="map"></div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        // Controllo se il browser supporta la geolocalizzazione
+        if ("geolocation" in navigator) {
+            navigator.geolocation.getCurrentPosition(
+                function(position) {
+                    const lat = position.coords.latitude;
+                    const lon = position.coords.longitude;
+
+                    // Inizializza la mappa
+                    const map = L.map('map').setView([lat, lon], 13);
+
+                    // Aggiungi il layer di OpenStreetMap
+                    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                        attribution: '&copy; OpenStreetMap contributors'
+                    }).addTo(map);
+
+                    // Aggiungi un marker alla posizione dell'utente
+                    L.marker([lat, lon]).addTo(map)
+                        .bindPopup("Sei qui!")
+                        .openPopup();
+                },
+                function(error) {
+                    alert("Errore nella geolocalizzazione: " + error.message);
+                }
+            );
+        } else {
+            alert("Geolocalizzazione non supportata dal tuo browser");
+        }
+    </script>
+</body>
+</html>
