@@ -1,4 +1,3 @@
-// Funzione per caricare il contenuto in base alla rotta
 async function loadPage(route) {
   try {
     // Aggiorna lo stato attivo del menu
@@ -9,14 +8,27 @@ async function loadPage(route) {
       }
     });
 
-    // Carica il contenuto della pagina
     const response = await fetch(`${route}.html`);
     if (!response.ok) throw new Error('Pagina non trovata');
     
     const data = await response.text();
-    document.getElementById('content').innerHTML = data;
+    // Estrae solo il contenuto del body usando un parser
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(data, 'text/html');
+    const bodyContent = doc.body.innerHTML;
     
-    // Aggiunge la rotta alla cronologia del browser
+    document.getElementById('content').innerHTML = bodyContent;
+    
+    // Sostituisci i link che puntano a index.html
+    document.querySelectorAll('#content a[href="index.html"]').forEach(link => {
+      link.href = '#';
+      link.setAttribute('data-route', 'home');
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        loadPage('home');
+      });
+    });
+    
     history.pushState({ route }, "", `#${route}`);
     
   } catch (err) {
@@ -28,37 +40,3 @@ async function loadPage(route) {
     console.error('Errore nel caricamento della pagina:', err);
   }
 }
-
-// Gestione della navigazione iniziale
-function handleInitialLoad() {
-  const hash = window.location.hash.replace('#', '');
-  const validRoutes = ['home', 'chi-siamo', 'cosa-facciamo', 'contatti'];
-  
-  if (hash && validRoutes.includes(hash)) {
-    loadPage(hash);
-  } else {
-    loadPage('home');
-  }
-}
-
-// Aggiungi event listener ai link di navigazione
-document.addEventListener('DOMContentLoaded', function() {
-  // Gestione click sui link
-  document.querySelectorAll('a[data-route]').forEach(link => {
-    link.addEventListener('click', function(e) {
-      e.preventDefault();
-      const route = this.getAttribute('data-route');
-      loadPage(route);
-    });
-  });
-  
-  // Gestione pulsanti indietro/avanti del browser
-  window.addEventListener('popstate', function(e) {
-    if (e.state && e.state.route) {
-      loadPage(e.state.route);
-    }
-  });
-  
-  // Caricamento iniziale
-  handleInitialLoad();
-});
