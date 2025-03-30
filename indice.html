@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Servizio di Routing</title>
+  <style>
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      gap: 15px;
+    }
+    nav a {
+      text-decoration: none;
+      color: #333;
+      padding: 5px 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+    nav a:hover, nav a.active {
+      background-color: #f0f0f0;
+    }
+    #content {
+      margin-top: 20px;
+      padding: 20px;
+      border: 1px solid #eee;
+    }
+  </style>
+</head>
+<body>
+  <h1>Benvenuti nel nostro sito!</h1>
+  
+  <nav>
+    <ul>
+      <li><a href="#" data-route="home" class="active">Home</a></li>
+      <li><a href="#" data-route="chi-siamo">Chi Siamo</a></li>
+      <li><a href="#" data-route="cosa-facciamo">Cosa Facciamo</a></li>
+      <li><a href="#" data-route="contatti">Contatti</a></li>
+    </ul>
+  </nav>
+  
+  <div id="content">
+    <!-- Contenuto verrà caricato qui dinamicamente -->
+  </div>
+
+  <script src="js/router.js"></script>
+</body>
+</html>
